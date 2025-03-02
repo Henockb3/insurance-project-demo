@@ -12,6 +12,7 @@ public class InsureMeSeleniumTest {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         ChromeOptions options = new ChromeOptions();
+        options.setBinary("/opt/google/chrome/chrome");        
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -21,7 +22,6 @@ public class InsureMeSeleniumTest {
         options.addArguments("--disable-software-rasterizer");
         options.addArguments("--disable-logging");
         options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-        options.setBinary("/usr/bin/chromedriver");
         WebDriver driver = new ChromeDriver(options);
 
         try {
