@@ -21,7 +21,7 @@ public class InsureMeSeleniumTest {
         options.addArguments("--disable-software-rasterizer");
         options.addArguments("--disable-logging");
         options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-        options.setBinary("/opt/google/chrome/chrome");
+        options.setBinary("/usr/bin/chromedriver");
         WebDriver driver = new ChromeDriver(options);
 
         try {
