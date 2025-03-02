@@ -25,7 +25,7 @@ public class InsureMeSeleniumTest {
         WebDriver driver = new ChromeDriver(options);
 
         try {
-            driver.get("http://18.218.238.178:8081/contact.html");
+            driver.get("http://13.59.10.4:8081/contact.html");
             System.out.println("Page Title: " + driver.getTitle());
 
             WebElement name = driver.findElement(By.id("inputName"));
