@@ -12,7 +12,7 @@ public class InsureMeSeleniumTest {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/opt/google/chrome/chrome-linux64/chrome");      
+        options.setBinary("/usr/bin/google-chrome");    
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
