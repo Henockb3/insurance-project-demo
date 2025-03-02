@@ -33,8 +33,8 @@ public class InsureMeSeleniumTest{
 			submitButton.click();
 
             WebElement responseMessage = driver.findElement(By.id("response"));
-			message.getText();
-			if(message.getText().equalsIgnoreCase(("Message Sent"))){
+			responseMessage.getText();
+			if(responseMessage.getText().equalsIgnoreCase(("Message Sent"))){
 				System.out.println("Test Case Passed");
 			}else{
 				System.out.println("Test Case Failed");
