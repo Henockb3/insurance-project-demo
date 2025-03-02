@@ -2,14 +2,24 @@
 - hosts: test-server
   become: true
   tasks:
-  - name: update apt
+  
+  - name: Update apt packages
     command: sudo apt-get update
-
-  - name: install docker
+    
+  - name: Install Docker
     command: sudo apt install -y docker.io
-
-  - name: start docker service
+    
+  - name: Start Docker service
     command: sudo systemctl start docker
-
-  - name: deploy insureme application
+    
+  - name: Stop existing container if running
+    command: sudo docker stop insure-me || true
+    ignore_errors: yes
+    
+  - name: Remove existing container if exists
+    command: sudo docker rm insure-me || true
+    ignore_errors: yes
+    
+  - name: Deploy insureme application
     command: sudo docker run -itd -p 8081:8081 --name insure-me henockb3/insure-me:1.0
+
