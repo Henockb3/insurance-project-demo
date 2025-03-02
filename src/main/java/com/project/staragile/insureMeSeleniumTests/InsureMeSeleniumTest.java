@@ -15,7 +15,7 @@ public class InsureMeSeleniumTest{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
 		try {
-            driver.get("http://ec2-3-138-33-98.us-east-2.compute.amazonaws.com:8081/contact.html");
+            driver.get("http://18.218.238.178:8081/contact.html");
 			System.out.println(driver.getTitle());
             WebElement name = driver.findElement(By.id("inputName"));
             name.sendKeys("Test Name");
