@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class InsureMeSeleniumTest {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
