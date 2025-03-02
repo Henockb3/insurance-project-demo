@@ -20,7 +20,7 @@ public class InsureMeSeleniumTest {
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-software-rasterizer");
         options.addArguments("--disable-logging");
-
+        options.setBinary("/usr/bin/chromedriver");
         WebDriver driver = new ChromeDriver(options);
 
         try {
